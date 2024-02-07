@@ -11,8 +11,7 @@ const meals = ref([
     name: '牛排',
     category: '蛋餅',
     price: '45',
-    image: 'https://hips.hearstapps.com/hmg-prod/images/new-project-63-1636610826.jpg?crop=0.490xw:0.980xh;0,0.0196xh&resize=640:*',
-    amount: 0 // 客戶點的量
+    image: 'https://media.istockphoto.com/id/617780768/photo/time-for-barbecue.jpg?s=1024x1024&w=is&k=20&c=x-5CAoHaRWK5-AH6ICzYr-57UCiLbW8AS9eC-yYID80=',   amount: 0 // 客戶點的量
   },
   {
     name: '牛肉麵',

@@ -15,6 +15,7 @@
 
       <div class="mt-3">
         <p class="text-gray-500">© liu yiwen. 2023 . 僅用於網站練習專案.</p>
+        <p class="text-gray-500">804高雄市鼓山區蓮海路70號</p>
       </div>
 
       <!-- Social Brands -->
@@ -60,6 +61,4 @@
     </div>
     <!-- End Grid -->
   </footer>
- 
-    
-  </template>
+</template>

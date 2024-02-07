@@ -117,3 +117,17 @@ const totalPrice = () => {
 };
 
 </script>
+<style>
+.swiper-button-next:after {
+  color: #BE4A4A !important;
+  font-weight: 1000;
+ 
+}
+.swiper-button-prev:after{
+  color: #BE4A4A !important;
+  font-weight: 800;
+}
+.swiper-pagination-bullet {
+  background: #BE4A4A;
+}
+</style>
