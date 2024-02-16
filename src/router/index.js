@@ -4,11 +4,12 @@ import Cart from '@/page/Cart.vue';
 import Shop from '@/page/Shop.vue';
 import Send from '@/page/Send.vue';
 import Invoice from '@/page/Invoice.vue';
+import search from '@/page/search.vue';
 
 // test資料
 import test_menu from '@/page/test_menu.vue';
 import test_order from '@/page/test_order.vue';
-
+import { useSearchStore }  from '@/stores/search.js'
 const routes = [
   {
     path: '/test_menu',
@@ -64,6 +65,15 @@ const routes = [
     component: Invoice,
     meta: {
       title: 'Invoice | 猴猴早餐店',
+    }
+  },
+  
+  {
+    path: '/search',
+    name: 'search',
+    component: search,
+      meta: {
+      title: `搜索結果 | 猴猴早餐店`,
     }
   },
   // 網址亂打，只會回首頁

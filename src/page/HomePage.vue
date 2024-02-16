@@ -2,51 +2,51 @@
   <!-- Navbar -->
   <Navbar />
   <!-- swiper -->
-  <div >
-    <swiper
-      :freeMode="true"
-      :mousewheel="true"
-      :loop="true"
-      :pagination="{
-        clickable: true,
-      }"
-      :autoplay="{
-        delay: 400,
-        disableOnInteraction: false,
-      }"
-      navigation
-      :modules="modules"
-      class="mySwiper"
-      
-    >
-      <swiper-slide>
-        <div class="flex items-center justify-center">
-          <img
-            src="http://www.yuangi.com.tw/data/adv/201901/1546850817677450916.jpg"
-            class="w-90 display-block mx-auto"
-          />
-        </div>
-      </swiper-slide>
+<div>
+  <swiper
+    :freeMode="true"
+    :mousewheel="true"
+    :loop="true"
+    :pagination="{
+      clickable: true,
+    }"
+    :autoplay="{
+      delay: 5000, // 設定每5秒自動切換一次
+      disableOnInteraction: false,
+    }"
+    navigation
+    :modules="modules"
+    class="mySwiper"
+  >
+    <swiper-slide>
+      <div class="flex items-center justify-center">
+        <img
+          src="http://www.yuangi.com.tw/data/adv/201901/1546850817677450916.jpg"
+          class="w-90 display-block mx-auto"
+        />
+      </div>
+    </swiper-slide>
 
-      <swiper-slide>
-        <div class="flex items-center justify-center">
-          <img
-            src="http://www.yuangi.com.tw/data/adv/201901/1546850817677450916.jpg"
-            class="w-90 display-block mx-auto"
-          />
-        </div>
-      </swiper-slide>
+    <swiper-slide>
+      <div class="flex items-center justify-center">
+        <img
+          src="http://www.yuangi.com.tw/data/adv/201901/1546850817677450916.jpg"
+          class="w-90 display-block mx-auto"
+        />
+      </div>
+    </swiper-slide>
 
-      <swiper-slide>
-        <div class="flex items-center justify-center">
-          <img
-            src="http://www.yuangi.com.tw/data/adv/201901/1546850817677450916.jpg"
-            class="w-90 display-block mx-auto"
-          />
-        </div>
-      </swiper-slide>
-    </swiper>
-  </div>
+    <swiper-slide>
+      <div class="flex items-center justify-center">
+        <img
+          src="http://www.yuangi.com.tw/data/adv/201901/1546850817677450916.jpg"
+          class="w-90 display-block mx-auto"
+        />
+      </div>
+    </swiper-slide>
+  </swiper>
+</div>
+
 
   <!-- Hero -->
   <div class="max-w-[85rem] mx-auto px-4 mt-[80px]">
@@ -83,7 +83,7 @@
       class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8"
     >
       <h1 class="text-[40px] font-bold mb-[40px] text-center lg:">
-        猴猴主廚精選 - 主打餐點
+        猴猴主廚主打餐點
       </h1>
       <div
         class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8"
@@ -172,7 +172,7 @@
         <a
           href="#test_menu"
           class="mt-2 text-[30px] font-medium text-indigo-600 hover:text-indigo-500"
-          >more...
+          >查看更多 . . .
           <span aria-hidden="true"> &rarr;</span>
         </a>
       </div>
@@ -365,16 +365,18 @@
 </template>
 <script setup>
 import { ref, onMounted } from "vue";
-
-import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import { EffectCoverflow, Pagination } from "swiper";
 import Navbar from "@/components/Navbar.vue";
 import Ft from "../components/footer.vue";
+// 配置 Swiper 以使用 Pagination 和 Autoplay 組件
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/swiper-bundle.min.css";
+import "swiper/swiper.min.css";
+import { Swiper as SwiperCore, Pagination, Navigation, Autoplay } from "swiper";
 
-
+SwiperCore.use([Pagination, Navigation, Autoplay]);
 const showDropdown = ref(false);
 const dropdownOptions = ref(["Option 1", "Option 2", "Option 3"]);
 let mySwiper = null;

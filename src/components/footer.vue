@@ -1,7 +1,7 @@
   <template>
   <!-- Footer -->
-  <footer class="bg-stone-200 w-full py-5 px-4 sm:px-6 lg:px-8 mx-auto">
-    <!-- Grid -->
+  <footer class="bg-stone-200 w-full py-5 px-4 sm:px-6 lg:px-8 mx-auto ">
+  <!-- Grid -->
     <div class="text-center">
       <div>
         <a

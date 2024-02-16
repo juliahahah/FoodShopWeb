@@ -1,9 +1,8 @@
 <template>
   <!-- Navbar -->
-<Navbar />
+  <Navbar />
 
   <div class="">
-     
     <!--懸浮購物車
     <div class="relative">
       <button
@@ -164,69 +163,80 @@
       </div>
     </div>
     -->
-    
-<!-- meals -->
 
-<div class=" px-[20vw] py-[80px] bg-gray-200 min-h-[80vh] grid md:ml-[8rem] mr-[9rem] grid-cols-3 md:gap-[5px] grid-cols-2 gap-4">
-  <div v-for="(meal, index) in $dishStore.meals">
-    <div class="md:w-[300px] w-[200px] md:h-[300px] h-[250px] bg-white rounded-[5px] shadow-md">
-      <div class="w-full">
-        <div class="aspect-w-7 aspect-h-8 w-full overflow-hidden rounded-[5px] bg-white shadow-md">
-          <router-link :to="{ path: '/shop' }">
-            <img
-              :src="meal.image"
-              class="object-cover h-1/2 w-full rounded-tl-[10px] rounded-tr-[0px] object-center transition-opacity duration-300 ease-in-out hover:opacity-75"
-              alt="Meal Image"
-            />
-          </router-link>
-        </div>
+    <!-- meals -->
 
-        <h3 class="mt-4 ml-2 text-sm text-gray-700">{{ meal.name }}</h3>
-
-        <div class="flex justify-between pr-[10px]">
-          <p class="mt-1 ml-2 text-lg font-medium text-gray-900">
-            $ {{ meal.price }}
-          </p>
-
-          <div class="flex gap-[20px]">
-            <button
-              @click="reduceDish(meal, index)"
-              class="w-[20px] h-[20px] bg-stone-500 text-white rounded-full text-[15px] leading-[15px] font-semibold shadow-lg active: bg-stone-500"
+    <div
+      class="px-[8vw] py-[80px] bg-gray-200 flex flex-wrap justify-center grid gap-[20px] md:"
+    >
+      <div v-for="(meal, index) in $dishStore.meals">
+        <div
+          class="md:w-[300px] w-[200px] md:h-[300px] h-[250px] bg-white rounded-[5px] shadow-md"
+        >
+          <div class="w-full">
+            <div
+              class="aspect-w-7 aspect-h-8 w-full overflow-hidden rounded-[5px] bg-white shadow-md"
             >
-              -
-            </button>
-            <div class="w-[10px]">{{ meal.amount }}</div>
-            <button
-              @click="addDish(meal, index)"
-              class="w-[20px] h-[20px] bg-stone-500 text-white rounded-full text-[15px] leading-[15px] font-semibold shadow-lg active: bg-stone-500"
-            >
-              +
-            </button>
+              <router-link :to="{ path: '/shop' }">
+                <img
+                  :src="meal.image"
+                  class="object-cover h-1/2 w-full rounded-tl-[10px] rounded-tr-[0px] object-center transition-opacity duration-300 ease-in-out hover:opacity-75"
+                  alt="Meal Image"
+                />
+              </router-link>
+            </div>
+
+            <h3 class="mt-4 ml-2 text-sm text-gray-700">{{ meal.name }}</h3>
+
+            <div class="flex justify-between pr-[10px]">
+              <p class="mt-1 ml-2 text-lg font-medium text-gray-900">
+                $ {{ meal.price }}
+              </p>
+
+              <div class="flex gap-[20px]">
+                <button
+                  @click="reduceDish(meal, index)"
+                  class="w-[20px] h-[20px] bg-stone-500 text-white rounded-full text-[15px] leading-[15px] font-semibold shadow-lg active: bg-stone-500"
+                >
+                  -
+                </button>
+                <div class="w-[10px]">{{ meal.amount }}</div>
+                <button
+                  @click="addDish(meal, index)"
+                  class="w-[20px] h-[20px] bg-stone-500 text-white rounded-full text-[15px] leading-[15px] font-semibold shadow-lg active: bg-stone-500"
+                >
+                  +
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
-
+    <!----前往購物車頁面-->
+    <div class="px-[20vw]">
+      <a
+        href="#send"
+        class="text-[30px] mb-[60px] px-[8vw] flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium bg-stone-500 text-white shadow-sm hover:bg-stone-700"
+      >
+        前往購物車頁面
+      </a>
+    </div>
     <!-- Footer -->
-       <Ft></Ft>
-  
+    <Ft></Ft>
   </div>
- 
-
 </template>
 <script setup>
 import Navbar from "@/components/Navbar.vue";
 import Ft from "../components/footer.vue";
 import {
-	ref,
-	onMounted,
-	onUnmounted,
-	reactive,
-	computed,
-	watch,
-	nextTick,
+  ref,
+  onMounted,
+  onUnmounted,
+  reactive,
+  computed,
+  watch,
+  nextTick,
 } from "vue";
 
 import { useDishStore } from "@/stores/test_dish";
@@ -234,31 +244,27 @@ const $dishStore = useDishStore();
 import { useCartStore } from "@/stores/test_cart";
 const $cartStore = useCartStore();
 
-const addDish=(meal,index)=>{
+const addDish = (meal, index) => {
+  $cartStore.addMeal(meal);
+};
 
-  $dishStore.meals[index].amount ++
-  $cartStore.addMeal(meal)
-}
-
-const reduceDish =(meal,index) => {
-  $dishStore.meals[index].amount =  $dishStore.meals[index].amount -1
-  if( $dishStore.meals[index].amount <= 0) {
-
-    $dishStore.meals[index].amount =0
-    $cartStore.deleteMeal(meal)
+const reduceDish = (meal, index) => {
+  $dishStore.meals[index].amount = $dishStore.meals[index].amount - 1;
+  if ($dishStore.meals[index].amount <= 0) {
+    $dishStore.meals[index].amount = 0;
+    $cartStore.deleteMeal(meal);
   }
   // console.log(false)
-}
+};
 
-const showCart = ref(false)
-const toggle_showCart=() =>{
-showCart.value =!showCart.value
-}
+const showCart = ref(false);
+const toggle_showCart = () => {
+  showCart.value = !showCart.value;
+};
 
 const totalPrice = () => {
   return $cartStore.cartArray.reduce((total, meal) => {
     return total + meal.price * meal.amount;
   }, 0);
 };
-
 </script>
