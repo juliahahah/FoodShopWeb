@@ -1,52 +1,20 @@
 <template>
   <!-- Navbar -->
   <Navbar />
-  <!-- swiper -->
-<div>
-  <swiper
-    :freeMode="true"
-    :mousewheel="true"
-    :loop="true"
-    :pagination="{
-      clickable: true,
-    }"
-    :autoplay="{
-      delay: 5000, // 設定每5秒自動切換一次
-      disableOnInteraction: false,
-    }"
-    navigation
-    :modules="modules"
-    class="mySwiper"
-  >
-    <swiper-slide>
-      <div class="flex items-center justify-center">
-        <img
-          src="http://www.yuangi.com.tw/data/adv/201901/1546850817677450916.jpg"
-          class="w-90 display-block mx-auto"
-        />
-      </div>
-    </swiper-slide>
+  <!--首頁圖 -->
 
-    <swiper-slide>
-      <div class="flex items-center justify-center">
-        <img
-          src="http://www.yuangi.com.tw/data/adv/201901/1546850817677450916.jpg"
-          class="w-90 display-block mx-auto"
-        />
-      </div>
-    </swiper-slide>
-
-    <swiper-slide>
-      <div class="flex items-center justify-center">
-        <img
-          src="http://www.yuangi.com.tw/data/adv/201901/1546850817677450916.jpg"
-          class="w-90 display-block mx-auto"
-        />
-      </div>
-    </swiper-slide>
-  </swiper>
-</div>
-
+  <div class="text-center mt-[-30px] relative">
+    <img
+      src="https://www.kungfutea.com.tw/upload/banner_list/twL_banner_22J07_THrQYfhJbr.jpg"
+      class="w-full"
+    />
+    <p
+      class="md:text-[80px] text-[40px]  text-white  font-bold absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+    >
+      猴猴早午餐<br>
+      <a class=" mt-[10px] md:text-[40px] text-[20px]"> 我們堅持給顧客最好的 </a>
+    </p>
+  </div>
 
   <!-- Hero -->
   <div class="max-w-[85rem] mx-auto px-4 mt-[80px]">
@@ -55,9 +23,11 @@
       class="grid md:grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 xl:gap-20 items-center"
     >
       <div class="ml-10 mr-10 text-center lg:text-left">
-        <h1 class="lg: text-[40px] font-bold leading-tight">猴猴早午餐店</h1>
+        <h1 class="lg: text-[40px] font-bold leading-tight">
+          <a class="text-stone-500">猴猴</a>早午餐
+        </h1>
 
-        <p class="mt-[20px] text-[30px] text-gray-800 dark:text-gray-400">
+        <p class="mt-[20px] text-[25px] text-gray-800 dark:text-gray-400">
           品味美好時光，猴猴早午餐店為您提供極致的用餐體驗。我們精心挑選新鮮食材，製作出口感十足、美味可口的早午餐料理。不僅味道令人陶醉，更有舒適的用餐環境，讓您感受到家的溫馨。
         </p>
       </div>
@@ -80,25 +50,25 @@
 
   <div class="bg-white">
     <div
-      class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8"
+      class="mt-[80px] mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8"
     >
       <h1 class="text-[40px] font-bold mb-[40px] text-center lg:">
-        猴猴主廚主打餐點
+        主打經典
       </h1>
       <div
-        class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8"
+        class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-4"
       >
         <a href="#test_menu" class="group">
           <div
             class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg xl:aspect-h-8 xl:aspect-w-7"
           >
             <img
-              src="https://ciao.kitchen/wp-content/uploads/2017/10/166e75_19d60bf89dbb4bc7b6548847ca8ab81emv2_d_1365_2048_s_2.jpg"
+              src="https://ciao.kitchen/wp-content/uploads/2017/10/166e75_19d60bf89dbb4bc7b6548847ca8ab81emv2_d_1365_2048_s_2.jpg?crop=0.490xw:0.980xh;0,0.0196xh&resize=640:*"
               alt="Tall slender porcelain bottle with natural clay textured body and cork stopper."
               class="product-image h-full w-full object-cover object-center group-hover:opacity-75"
             />
           </div>
-          <h3 class="mt-4 text-sm text-gray-700">新鮮炸球</h3>
+          <h3 class="mt-4 text-[20px] text-gray-700">芝麻饅頭</h3>
           <p class="mt-1 text-lg font-medium text-gray-900">$48</p>
         </a>
         <a href="#test_menu" class="group">
@@ -112,20 +82,18 @@
             />
           </div>
 
-          <h3 class="mt-4 text-sm text-gray-700">清新牛排</h3>
+          <h3 class="mt-4 text-[20px] text-gray-700">清新牛排</h3>
           <p class="mt-1 text-lg font-medium text-gray-900">$35</p>
         </a>
         <a href="#test_menu" class="group">
-          <div
-            class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg xl:aspect-h-8 xl:aspect-w-7"
-          >
+          <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg">
             <img
               src="https://plugins-media.makeupar.com/smb/blog/post/2022-09-23/f7f6439f-2498-42ef-8fbe-9a59ec6e527f.jpg"
               alt="Person using a pen to cross a task off a productivity paper card."
               class="product-image h-full w-full object-cover object-center group-hover:opacity-75"
             />
           </div>
-          <h3 class="mt-4 text-sm text-gray-700">活力沙拉</h3>
+          <h3 class="mt-4 text-[20px] text-gray-700">活力沙拉</h3>
           <p class="mt-1 text-lg font-medium text-gray-900">$89</p>
         </a>
         <a href="#test_menu" class="group">
@@ -138,7 +106,7 @@
               class="product-image h-full w-full object-cover object-center group-hover:opacity-75"
             />
           </div>
-          <h3 class="mt-4 text-sm text-gray-700">活力陽春麵</h3>
+          <h3 class="mt-4 text-[20px] text-gray-700">活力陽春麵</h3>
           <p class="mt-1 text-lg font-medium text-gray-900">$35</p>
         </a>
         <a href="#test_menu" class="group">
@@ -151,7 +119,7 @@
               class="product-image h-full w-full object-cover object-center group-hover:opacity-75"
             />
           </div>
-          <h3 class="mt-4 text-sm text-gray-700">芝麻饅頭</h3>
+          <h3 class="mt-4 text-[20px] text-gray-700">芝麻饅頭</h3>
           <p class="mt-1 text-lg font-medium text-gray-900">$48</p>
         </a>
         <a href="#test_menu" class="group">
@@ -164,200 +132,15 @@
               class="product-image h-full w-full object-cover object-center group-hover:opacity-75"
             />
           </div>
-          <h3 class="mt-4 text-sm text-gray-700">清新料理</h3>
+          <h3 class="mt-4 text-[20px] text-gray-700">清新料理</h3>
           <p class="mt-1 text-lg font-medium text-gray-900">$35</p>
         </a>
         <!-- End product -->
-        <!-- More products... -->
-        <a
-          href="#test_menu"
-          class="mt-2 text-[30px] font-medium text-indigo-600 hover:text-indigo-500"
-          >查看更多 . . .
-          <span aria-hidden="true"> &rarr;</span>
-        </a>
       </div>
     </div>
-  </div>
-
-  <!-- 評論 -->
-  <div class="overflow-hidden bg-gray-100 mt-3">
-    <div class="container mx-auto px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
-      <!-- 標題 -->
-      <div class="max-w-3xl mx-auto mb-10 md:mb-16 text-center">
-        <h2 class="text-[40px] lg: font-semibold text-gray-800">
-          我們的美食讓顧客讚不絕口
-        </h2>
-      </div>
-      <!-- 結束標題 -->
-      <!-- 網格 -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- 卡片 -->
-
-        <div class="flex h-auto">
-          <div class="flex flex-col bg-white rounded-xl shadow-md">
-            <div class="flex-auto p-4 md:p-6">
-              <p>
-                “這裡的食物絕對美味！每一口都充滿了風味，就像是對烹飪天堂的一次品嚐。”
-              </p>
-            </div>
-            <div class="p-4 bg-gray-200 rounded-b-xl md:px-7">
-              <div class="flex items-center justify-between">
-                <div class="flex-shrink-0">
-                  <img
-                    class="h-8 w-8 rounded-full"
-                    src="https://attach.setn.com/newsimages/2020/03/05/2439702-XXL.jpg"
-                    alt="顧客頭像"
-                  />
-                </div>
-                <div class="flex flex-col items-end">
-                  <p class="text-sm font-semibold text-gray-700">顧客滿意度</p>
-                  <p class="text-lg font-bold text-gray-900">9.5</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="flex h-auto">
-          <div class="flex flex-col bg-white rounded-xl shadow-md">
-            <div class="flex-auto p-4 md:p-6">
-              <p>
-                “這裡的食物絕對美味！每一口都充滿了風味，就像是對烹飪天堂的一次品嚐。”
-              </p>
-            </div>
-            <div class="p-4 bg-gray-200 rounded-b-xl md:px-7">
-              <div class="flex items-center justify-between">
-                <div class="flex-shrink-0">
-                  <img
-                    class="h-8 w-8 rounded-full"
-                    src="https://attach.setn.com/newsimages/2020/03/05/2439702-XXL.jpg"
-                    alt="顧客頭像"
-                  />
-                </div>
-                <div class="flex flex-col items-end">
-                  <p class="text-sm font-semibold text-gray-700">顧客滿意度</p>
-                  <p class="text-lg font-bold text-gray-900">9.5</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="flex h-auto">
-          <div class="flex flex-col bg-white rounded-xl shadow-md">
-            <div class="flex-auto p-4 md:p-6">
-              <p>
-                “這裡的食物絕對美味！每一口都充滿了風味，就像是對烹飪天堂的一次品嚐。”
-              </p>
-            </div>
-            <div class="p-4 bg-gray-200 rounded-b-xl md:px-7">
-              <div class="flex items-center justify-between">
-                <div class="flex-shrink-0">
-                  <img
-                    class="h-8 w-8 rounded-full"
-                    src="https://attach.setn.com/newsimages/2020/03/05/2439702-XXL.jpg"
-                    alt="顧客頭像"
-                  />
-                </div>
-                <div class="flex flex-col items-end">
-                  <p class="text-sm font-semibold text-gray-700">顧客滿意度</p>
-                  <p class="text-lg font-bold text-gray-900">9.5</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="flex h-auto">
-          <div class="flex flex-col bg-white rounded-xl shadow-md">
-            <div class="flex-auto p-4 md:p-6">
-              <p>
-                “這裡的食物絕對美味！每一口都充滿了風味，就像是對烹飪天堂的一次品嚐。”
-              </p>
-            </div>
-            <div class="p-4 bg-gray-200 rounded-b-xl md:px-7">
-              <div class="flex items-center justify-between">
-                <div class="flex-shrink-0">
-                  <img
-                    class="h-8 w-8 rounded-full"
-                    src="https://attach.setn.com/newsimages/2020/03/05/2439702-XXL.jpg"
-                    alt="顧客頭像"
-                  />
-                </div>
-                <div class="flex flex-col items-end">
-                  <p class="text-sm font-semibold text-gray-700">顧客滿意度</p>
-                  <p class="text-lg font-bold text-gray-900">9.5</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="flex h-auto">
-          <div class="flex flex-col bg-white rounded-xl shadow-md">
-            <div class="flex-auto p-4 md:p-6">
-              <p>
-                “這裡的食物絕對美味！每一口都充滿了風味，就像是對烹飪天堂的一次品嚐。”
-              </p>
-            </div>
-            <div class="p-4 bg-gray-200 rounded-b-xl md:px-7">
-              <div class="flex items-center justify-between">
-                <div class="flex-shrink-0">
-                  <img
-                    class="h-8 w-8 rounded-full"
-                    src="https://attach.setn.com/newsimages/2020/03/05/2439702-XXL.jpg"
-                    alt="顧客頭像"
-                  />
-                </div>
-                <div class="flex flex-col items-end">
-                  <p class="text-sm font-semibold text-gray-700">顧客滿意度</p>
-                  <p class="text-lg font-bold text-gray-900">9.5</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="flex h-auto">
-          <div class="flex flex-col bg-white rounded-xl shadow-md">
-            <div class="flex-auto p-4 md:p-6">
-              <p>
-                “這裡的食物絕對美味！每一口都充滿了風味，就像是對烹飪天堂的一次品嚐。”
-              </p>
-            </div>
-            <div class="p-4 bg-gray-200 rounded-b-xl md:px-7">
-              <div class="flex items-center justify-between">
-                <div class="flex-shrink-0">
-                  <img
-                    class="h-8 w-8 rounded-full"
-                    src="https://attach.setn.com/newsimages/2020/03/05/2439702-XXL.jpg"
-                    alt="顧客頭像"
-                  />
-                </div>
-                <div class="flex flex-col items-end">
-                  <p class="text-sm font-semibold text-gray-700">顧客滿意度</p>
-                  <p class="text-lg font-bold text-gray-900">9.5</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- 結束網格 -->
-      <!-- 網格 -->
-      <div
-        id="app"
-        class="mt-20 grid gap-6 grid-cols-2 sm:gap-12 lg:grid-cols-3 lg:gap-8"
-      >
-        <div v-for="(item, index) in data" :key="index">
-          <h4 class="text-lg sm:text-xl font-semibold text-white">
-            {{ item.title }}
-          </h4>
-          <p class="mt-2 sm:mt-3 text-4xl sm:text-6xl font-bold text-blue-500">
-            <span v-if="item.id === 'customerSatisfaction'"
-              >{{ customerSatisfaction }}%</span
-            >
-            <span v-else>{{ item.value }}</span>
-          </p>
-          <p class="mt-1 text-gray-400">{{ item.description }}</p>
-        </div>
-      </div>
-      <!-- 結束網格 -->
+    <!-- More products... -->
+    <div class="mb-[80px] text-center">
+      <a href="#test_menu" class="text-3xl font-medium"> ~~查看完整菜單~~ </a>
     </div>
   </div>
 
@@ -423,8 +206,8 @@ body {
 }
 
 .product-image {
-  max-width: 300px;
-  max-height: 250px;
+ 
+  height: 300px !important;
 }
 .fade-enter-active,
 .fade-leave-active {
@@ -441,7 +224,9 @@ body {
 .swiper-button-next:after {
   color: gray !important;
   font-weight: 1000;
+  margin-right: 25px; /* 調整這個值以改變左邊的位置 */
 }
+
 .swiper-button-prev:after {
   color: gray !important;
   font-weight: 800;
@@ -450,5 +235,10 @@ body {
   background: gray;
   width: 20px;
   height: 20px;
+}
+/* 假设你给swiper容器加了一个类名为mySwiper，你可以根据实际情况修改类名 */
+.mySwiper img {
+  width: 100%;
+  height: auto;
 }
 </style>

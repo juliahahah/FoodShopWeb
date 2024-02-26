@@ -11,98 +11,100 @@ export const useDishStore = defineStore('dish', () => {
       name: '玉米蛋餅',
       category: '蛋餅',
       price: '45',
-      image: 'https://media.istockphoto.com/id/617780768/photo/time-for-barbecue.jpg?s=1024x1024&w=is&k=20&c=x-5CAoHaRWK5-AH6ICzYr-57UCiLbW8AS9eC-yYID80=', amount: 0 // 客戶點的量
+      introduction: '香脆可口，玉米香氣濃郁，絕對美味！',
+      image: 'https://media.istockphoto.com/id/617780768/photo/time-for-barbecue.jpg?s=1024x1024&w=is&k=20&c=x-5CAoHaRWK5-AH6ICzYr-57UCiLbW8AS9eC-yYID80=',
+      amount: 0 // 客戶點的量
     },
     {
       name: '牛肉麵',
       category: '麵食',
       price: '120',
+      introduction: '濃郁牛肉湯底，配上嫩滑麵條，回味無窮！',
       image: 'https://media.istockphoto.com/id/617780768/photo/time-for-barbecue.jpg?s=1024x1024&w=is&k=20&c=x-5CAoHaRWK5-AH6ICzYr-57UCiLbW8AS9eC-yYID80=',
-      //  客戶點的量
       amount: 0,
     },
     {
       name: '雞排便當',
       category: '便當',
       price: '90',
+      introduction: '香脆多汁的雞排，搭配美味便當飯，超滿足！',
       image: 'https://media.istockphoto.com/id/1402612822/photo/friends-having-a-barbecue-party.jpg?s=1024x1024&w=is&k=20&c=6-ftj18sdfF076FbwpdpNVzYGJ7jpEXjb4aXOHmhaXo=',
-      //  客戶點的量
       amount: 0,
     },
     {
       name: '海鮮披薩',
       category: '披薩',
       price: '180',
+      introduction: '新鮮海鮮搭配薄脆餅皮，每口都是美味的享受！',
       image: 'https://media.istockphoto.com/id/617780768/photo/time-for-barbecue.jpg?s=1024x1024&w=is&k=20&c=x-5CAoHaRWK5-AH6ICzYr-57UCiLbW8AS9eC-yYID80=',
-      //  客戶點的量
       amount: 0,
     },
     {
       name: '沙拉三明治',
       category: '三明治',
       price: '60',
+      introduction: '蔬果鮮甜，夾入多層口感，健康美味的選擇！',
       image: 'https://media.istockphoto.com/id/603906484/photo/vegetable-salad.jpg?s=1024x1024&w=is&k=20&c=t5NQDSRIomaRRcU1A1xdBuDM7AMtRQwIbFDAARk7Rr4=',
-      //  客戶點的量
       amount: 0,
     },
     {
       name: '炸雞翅',
       category: '小吃',
       price: '70',
+      introduction: '外酥內嫩的炸雞翅，搭配香醇醬汁，難以抗拒！',
       image: 'https://media.istockphoto.com/id/1402612822/photo/friends-having-a-barbecue-party.jpg?s=1024x1024&w=is&k=20&c=6-ftj18sdfF076FbwpdpNVzYGJ7jpEXjb4aXOHmhaXo=',
-      //  客戶點的量
       amount: 0,
     },
     {
       name: '綜合壽司',
       category: '壽司',
       price: '150',
+      introduction: '新鮮刺身、熟成醋飯，味蕾享受一口滿足！',
       image: 'https://media.istockphoto.com/id/585769692/photo/delicious-spaghetti-served-on-a-black-plate.jpg?s=1024x1024&w=is&k=20&c=9uQ41PXPJTcC3P9VbOf1KVniR4cLlWAevvttVuEUPMI=',
-      //  客戶點的量
       amount: 0,
     },
     {
       name: '烤肉串',
       category: '串燒',
       price: '100',
+      introduction: '香烤肉串，搭配獨特調味，美味又飽足！',
       image: 'https://media.istockphoto.com/id/516329534/photo/last-straw.jpg?s=2048x2048&w=is&k=20&c=1L46K6jtSK0cuy9YTGuR7yf8621sftHxEpTkoWtmmk4=',
-      //  客戶點的量
       amount: 0,
     },
     {
       name: '奶茶珍珠',
       category: '飲料',
       price: '50',
+      introduction: '香濃奶茶，搭配Q彈珍珠，喝一口滿足口腹之慾！',
       image: 'https://media.istockphoto.com/id/1325891675/photo/red-rose-and-white-wine-in-glasses-on-white-background-top-view-wine-bar-shop-winery-wine.jpg?s=1024x1024&w=is&k=20&c=h6erYoqV3ItaW4hqBLXQg05FrD6gooAuYgZ7yLEf1mw=',
-      //  客戶點的量
       amount: 0,
     },
     {
       name: '水果沙拉',
       category: '沙拉',
       price: '80',
+      introduction: '五彩繽紛的水果，清新爽口，是健康的選擇！',
       image: 'https://media.istockphoto.com/id/603906484/photo/vegetable-salad.jpg?s=1024x1024&w=is&k=20&c=t5NQDSRIomaRRcU1A1xdBuDM7AMtRQwIbFDAARk7Rr4=',
-      //  客戶點的量
       amount: 0,
     },
     {
       name: '奶茶',
       category: '飲料',
       price: '50',
+      introduction: '濃郁奶香，香甜滑順，是休閒時光的完美搭配！',
       image: 'https://media.istockphoto.com/id/1325891675/photo/red-rose-and-white-wine-in-glasses-on-white-background-top-view-wine-bar-shop-winery-wine.jpg?s=1024x1024&w=is&k=20&c=h6erYoqV3ItaW4hqBLXQg05FrD6gooAuYgZ7yLEf1mw=',
-      //  客戶點的量
       amount: 0,
     },
     {
       name: '生菜沙拉',
       category: '沙拉',
       price: '70',
+      introduction: '新鮮生菜，搭配營養豐富的配料，健康美味！',
       image: 'https://media.istockphoto.com/id/603906484/photo/vegetable-salad.jpg?s=1024x1024&w=is&k=20&c=t5NQDSRIomaRRcU1A1xdBuDM7AMtRQwIbFDAARk7Rr4=',
-      //  客戶點的量
       amount: 0,
     }
-  ]
-  )
+  ]);
+  
 
 
 

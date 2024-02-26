@@ -7,10 +7,10 @@
   <div class="flex justify-center items-center h-screen">
     <div class="w-full sm:w-3/4 lg:w-1/2">
       <div
-        class="flex flex-col h-full overflow-y-scroll bg-white shadow-xl rounded-lg p-4"
+        class="flex flex-col h-auto  bg-white shadow-xl rounded-lg p-4"
       >
         <div class="flex-1 overflow-y-auto px-4 py-6 sm:px-6">
-          <h2 class="text-[30px]  font-bold text-gray-900">結帳</h2>
+          <h2 class="text-[30px]  font-bold text-gray-900">購物車</h2>
           <div v-if="$cartStore.cartArray.length > 0">
             <div class="mt-8">
               <ul role="list" class="divide-y divide-gray-200">
@@ -74,25 +74,15 @@
             </p>
           </div>
           <a
-            href="#invoice"
+            href="#"
             class="text-[30px] mt-4 flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium bg-stone-500 text-white shadow-sm hover:bg-stone-700"
           >
-            前往送出頁面
+            前往結帳
           </a>
           <div
             class="mt-6 flex justify-center text-center text-[20px] text-gray-500"
           >
-            <p>
-              或<br />
-              <a
-                href="#test_menu"
-                type="button"
-                class="font-medium text-indigo-600 hover:text-indigo-500"
-              >
-                繼續購物
-                <span aria-hidden="true"> &rarr;</span>
-              </a>
-            </p>
+        
           </div>
         </div>
       </div>
