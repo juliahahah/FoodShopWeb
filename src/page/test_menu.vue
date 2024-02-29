@@ -28,7 +28,7 @@
             v-model="$store.searchWord"
             v-on:keyup.enter="toSearchPage()"
             class="mb-8 w-[87%] h-[60px] border-black border-[2px] border-double focus:border-black focus:ring-0 text-start text-[18px] text-black/80 tracking-wider"
-            placeholder="搜尋商品"
+            placeholder="搜尋料理"
           />
 
           <button
@@ -55,7 +55,7 @@
           <div class="flex items-center">
             <a
               href="#specialMeals"
-              class="mr-2 text-sm font-medium text-gray-900"
+              class="mr-2 text-sm text-[30px] text-gray-900"
               >特色料理</a
             >
             <svg
@@ -102,41 +102,45 @@
     </div>
 
     <!-- meals -->
+
     <!---特色料理-->
 
-    <h1
-      id="specialMeals"
-      class="full-page mt-[80px] text-[40px] font-bold mb-[40px] text-center lg:"
-    >
-      特色料理
+    <h1 class="mt-[30px] text-[45px] font-bold mb-[10px] text-center">
+      Specialty Dishes
     </h1>
+    <h1 class="text-[30px] font-bold mb-[40px] text-center">
+      <a class="text-stone-500">特 | 色 | 料 | 理</a>
+    </h1>
+
     <div
       class="px-[8vw] py-[30px] bg-gray-200 flex flex-wrap justify-center grid gap-[20px] md:"
     >
       <div v-for="(meal, index) in $dishStore.meals">
         <div
-          class="md:w-[300px] w-[200px] w-[150px] md:h-[350px] h-[300px] h-[250px] bg-white   shadow-md"
+          class="md:w-[300px] w-[200px] w-[150px] md:h-[350px] h-[300px] h-[250px] bg-white shadow-md"
         >
           <div class="w-full">
             <div
-              class="aspect-w-7 aspect-h-8 w-full overflow-hidden   bg-white shadow-md"
+              class="aspect-w-7 aspect-h-8 w-full overflow-hidden bg-white shadow-md"
             >
               <router-link :to="{ path: '/' }">
                 <img
                   :src="meal.image"
-                  class="object-cover h-1/2 w-full rounded-tl-[10px] rounded-tr-[0px] object-center transition-opacity duration-300 ease-in-out hover:opacity-75"
+                  class="object-cover h-1/2 w-full object-center transition-opacity duration-300 ease-in-out hover:opacity-75"
                   alt="Meal Image"
                 />
               </router-link>
             </div>
 
-            <h3 class="mt-4 ml-2 text-sm text-gray-700">{{ meal.name }}</h3>
-            <h3 class="mt-4 ml-2 text-sm text-gray-700">
+            <h3 class="mt-4 ml-2 font-bold text-[20px] text-gray-700">
+              {{ meal.name }}
+            </h3>
+            <h3 class="mt-4 ml-2 text-[15px] text-gray-700">
               {{ meal.introduction }}
             </h3>
 
-            <div class="flex justify-between pr-[10px]">
-              <p class="mt-1 ml-2 text-lg font-medium text-gray-900">
+            <div class="flex justify-between pr-[10px] mt-[10px]">
+              <p class="ml-2 text-lg font-medium text-gray-900">
                 $ {{ meal.price }}
               </p>
 
@@ -162,39 +166,42 @@
     </div>
     <!---主打經典-->
 
-    <h1
-      id="featuredMeals"
-      class="mt-[80px] text-[40px] font-bold mb-[40px] text-center lg:"
-    >
-      主打精選
+   
+    <h1 class="mt-[30px] text-[45px] font-bold mb-[10px] text-center">
+      Featured Selection
+    </h1>
+    <h1 class="text-[30px] font-bold mb-[40px] text-center">
+      <a class="text-stone-500">主 | 打 | 精 | 選</a>
     </h1>
     <div
       class="px-[8vw] py-[30px] bg-gray-200 flex flex-wrap justify-center grid gap-[20px] md:"
     >
       <div v-for="(meal, index) in $dishStore.meals">
         <div
-          class="md:w-[300px] w-[200px] w-[150px] md:h-[350px] h-[300px] h-[250px] bg-white   shadow-md"
+          class="md:w-[300px] w-[200px] w-[150px] md:h-[350px] h-[300px] h-[250px] bg-white shadow-md"
         >
           <div class="w-full">
             <div
-              class="aspect-w-7 aspect-h-8 w-full overflow-hidden   bg-white shadow-md"
+              class="aspect-w-7 aspect-h-8 w-full overflow-hidden bg-white shadow-md"
             >
               <router-link :to="{ path: '/' }">
                 <img
                   :src="meal.image"
-                  class="object-cover h-1/2 w-full rounded-tl-[10px] rounded-tr-[0px] object-center transition-opacity duration-300 ease-in-out hover:opacity-75"
+                  class="object-cover h-1/2 w-full object-center transition-opacity duration-300 ease-in-out hover:opacity-75"
                   alt="Meal Image"
                 />
               </router-link>
             </div>
 
-            <h3 class="mt-4 ml-2 text-sm text-gray-700">{{ meal.name }}</h3>
-            <h3 class="mt-4 ml-2 text-sm text-gray-700">
+            <h3 class="mt-4 ml-2 font-bold text-[20px] text-gray-700">
+              {{ meal.name }}
+            </h3>
+            <h3 class="mt-4 ml-2 text-[15px] text-gray-700">
               {{ meal.introduction }}
             </h3>
 
-            <div class="flex justify-between pr-[10px]">
-              <p class="mt-1 ml-2 text-lg font-medium text-gray-900">
+            <div class="flex justify-between pr-[10px] mt-[10px]">
+              <p class="ml-2 text-lg font-medium text-gray-900">
                 $ {{ meal.price }}
               </p>
 
@@ -219,40 +226,44 @@
       </div>
     </div>
 
-    <!---季節料理-->
-    <h1
-      id="seasonalMeals"
-      class="mt-[80px] text-[40px] font-bold mb-[40px] text-center lg:"
-    >
-      季節料理
+     <!---季節料理-->
+
+   
+    <h1 class="mt-[30px] text-[45px] font-bold mb-[10px] text-center">
+      Seasonal Cuisine
+    </h1>
+    <h1 class="text-[30px] font-bold mb-[40px] text-center">
+      <a class="text-stone-500">季 | 節 | 料 | 理</a>
     </h1>
     <div
       class="px-[8vw] py-[30px] bg-gray-200 flex flex-wrap justify-center grid gap-[20px] md:"
     >
       <div v-for="(meal, index) in $dishStore.meals">
         <div
-          class="md:w-[300px] w-[200px] w-[150px] md:h-[350px] h-[300px] h-[250px] bg-white   shadow-md"
+          class="md:w-[300px] w-[200px] w-[150px] md:h-[350px] h-[300px] h-[250px] bg-white shadow-md"
         >
           <div class="w-full">
             <div
-              class="aspect-w-7 aspect-h-8 w-full overflow-hidden   bg-white shadow-md"
+              class="aspect-w-7 aspect-h-8 w-full overflow-hidden bg-white shadow-md"
             >
               <router-link :to="{ path: '/' }">
                 <img
                   :src="meal.image"
-                  class="object-cover h-1/2 w-full rounded-tl-[10px] rounded-tr-[0px] object-center transition-opacity duration-300 ease-in-out hover:opacity-75"
+                  class="object-cover h-1/2 w-full object-center transition-opacity duration-300 ease-in-out hover:opacity-75"
                   alt="Meal Image"
                 />
               </router-link>
             </div>
 
-            <h3 class="mt-4 ml-2 text-sm text-gray-700">{{ meal.name }}</h3>
-            <h3 class="mt-4 ml-2 text-sm text-gray-700">
+            <h3 class="mt-4 ml-2 font-bold text-[20px] text-gray-700">
+              {{ meal.name }}
+            </h3>
+            <h3 class="mt-4 ml-2 text-[15px] text-gray-700">
               {{ meal.introduction }}
             </h3>
 
-            <div class="flex justify-between pr-[10px]">
-              <p class="mt-1 ml-2 text-lg font-medium text-gray-900">
+            <div class="flex justify-between pr-[10px] mt-[10px]">
+              <p class="ml-2 text-lg font-medium text-gray-900">
                 $ {{ meal.price }}
               </p>
 
@@ -276,6 +287,7 @@
         </div>
       </div>
     </div>
+
 
     <!-- Footer -->
     <Ft></Ft>

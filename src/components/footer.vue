@@ -1,6 +1,6 @@
   <template>
   <!-- Footer -->
-  <footer class="bg-stone-700 w-full py-5 px-4 sm:px-6 lg:px-8 mx-auto ">
+  <footer class="bg-stone-800 w-full py-5 px-4 sm:px-6 lg:px-8 mx-auto ">
   <!-- Grid -->
     <div class="text-center">
       <div>
@@ -15,8 +15,8 @@
 
       <div class="mt-3">
         <p class="text-white">© liu yiwen. 2023 . 僅用於網站練習專案.</p>
-        <p class="text-white">804高雄市鼓山區蓮海路70號</p>
-                <p class="text-white">連絡電話(07)1244567</p>
+        <p class="text-white">804高雄市鼓山區蓮海路70號 | 04-2350-1166 | info@kungfutea.com.tw</p>
+
       </div>
 
       <!-- Social Brands -->

@@ -75,7 +75,7 @@
           </div>
           <a
             href="#"
-            class="text-[30px] mt-4 flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium bg-stone-500 text-white shadow-sm hover:bg-stone-700"
+            class="text-[30px] mt-[30px] flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium bg-stone-500 text-white shadow-sm hover:bg-stone-700"
           >
             前往結帳
           </a>

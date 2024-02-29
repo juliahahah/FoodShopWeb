@@ -8,37 +8,42 @@
       src="https://www.kungfutea.com.tw/upload/banner_list/twL_banner_22J07_THrQYfhJbr.jpg"
       class="w-full"
     />
+
     <p
-      class="md:text-[80px] text-[40px]  text-white  font-bold absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+      class="md:text-[80px] text-[40px] text-white font-bold absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
     >
-      猴猴早午餐<br>
-      <a class=" mt-[10px] md:text-[40px] text-[20px]"> 我們堅持給顧客最好的 </a>
+      猴猴早午餐<br />
+      <a class="mt-[10px] md:text-[40px] text-[20px]">
+        15年來我們堅持給顧客最好的
+      </a>
     </p>
   </div>
 
   <!-- Hero -->
-  <div class="max-w-[85rem] mx-auto px-4 mt-[80px]">
-    <!-- Grid -->
-    <div
-      class="grid md:grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 xl:gap-20 items-center"
-    >
-      <div class="ml-10 mr-10 text-center lg:text-left">
-        <h1 class="lg: text-[40px] font-bold leading-tight">
-          <a class="text-stone-500">猴猴</a>早午餐
+  <div class="px-4 mt-[80px] lg:ml-[8vw]">
+    <!-- Grid--->
+    <div class="grid md:grid-cols-1 lg:grid-cols-2 items-center">
+      <div class="ml-[10px] mr-[10px] text-center lg:text-left">
+        <h1 class="text-[45px] font-bold mb-[10px]">ABOUT US</h1>
+        <h1 class="text-[30px] font-bold mb-[40px]">
+          <a class="text-stone-500">關 | 於 | 我 | 們</a>
         </h1>
-
+        <p class="mt-[20px] text-[25px] font-bold text-gray-800">
+          追求完美，用心屹立於業界
+        </p>
         <p class="mt-[20px] text-[25px] text-gray-800 dark:text-gray-400">
           品味美好時光，猴猴早午餐店為您提供極致的用餐體驗。我們精心挑選新鮮食材，製作出口感十足、美味可口的早午餐料理。不僅味道令人陶醉，更有舒適的用餐環境，讓您感受到家的溫馨。
         </p>
       </div>
 
-      <!--炒飯圖 -->
-      <div class="flex justify-center items-center">
+      <!--圖  --->
+      <div class="flex justify-center items-center mt-[30px]">
         <img
           class="rounded-lg"
           width="500"
           height="200"
-          src="https://tokyo-kitchen.icook.network/uploads/recipe/cover/409908/a86554814474b844.jpg"
+          src="../assets/images/主打.jpg"
+          alt="主打圖片"
           max-height="300px"
         />
       </div>
@@ -52,8 +57,9 @@
     <div
       class="mt-[80px] mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8"
     >
-      <h1 class="text-[40px] font-bold mb-[40px] text-center lg:">
-        主打經典
+      <h1 class="text-[45px] font-bold mb-[10px] text-center lg:">PRODUCTS</h1>
+      <h1 class="text-[30px] font-bold mb-[40px] text-center lg:">
+        <a class="text-stone-500">推 | 薦 | 產 | 品</a>
       </h1>
       <div
         class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-4"
@@ -139,9 +145,17 @@
       </div>
     </div>
     <!-- More products... -->
-    <div class="mb-[80px] text-center">
-      <a href="#test_menu" class="text-3xl font-medium"> ~~查看完整菜單~~ </a>
-    </div>
+ <!-- More products... -->
+<div class="mb-[80px] text-center">
+  <a
+    href="#test_menu"
+    class="rounded-[40px] font-bold relative text-[25px] py-4 px-8 border-1 border-black bg-white text-black hover:bg-stone-700 hover:text-white"
+  >
+    <span class="">~ View Full Menu ~</span>
+
+  </a>
+</div>
+
   </div>
 
   <Ft></Ft>
@@ -187,6 +201,19 @@ const modules = ref([Pagination]);
 
 
 <style scoped>
+.masterBtn a::after {
+  content: "";
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background: url(../images/moreArrow.png);
+  background-repeat: no-repeat;
+  display: block;
+  width: 23px;
+  height: 23px;
+}
 #app {
   height: 100%;
 }
@@ -206,7 +233,6 @@ body {
 }
 
 .product-image {
- 
   height: 300px !important;
 }
 .fade-enter-active,

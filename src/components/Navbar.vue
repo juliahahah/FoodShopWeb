@@ -1,9 +1,9 @@
 <template>
-  <header class="mb-[30px] ixed w-[100vw] bg-stone-600" style="z-index: 100">
+  <header class="mb-[30px] ixed w-[100vw] bg-stone-800" style="z-index: 100">
     <!-- pc & tablet-->
     <nav
       @mouseleave="toggle_ShowDropdown(-1)"
-      class="bg-stone-600 w-full h-[80px] mx-auto max-w-[85rem] md:flex items-center px-[4vw] md:px-[3vw] justify-between border-b-[2px] border-black/10 hidden"
+      class="bg-stone-800 w-full h-[80px] mx-auto max-w-[85rem] md:flex items-center px-[4vw] md:px-[3vw] justify-between border-b-[2px] border-black/10 hidden"
       style="z-index: 500"
     >
       <div>
@@ -23,7 +23,7 @@
         >
           <a
             @mouseenter="toggle_ShowDropdown(-1)"
-            class="font-semibold border-b-[2px] border-stone-600 text-white hover:border-white h-[20px] flex items-center"
+            class="font-semibold border-b-[2px] border-stone-800 text-white hover:border-white h-[20px] flex items-center"
             href="#"
           >
             首頁
@@ -31,19 +31,19 @@
 
           <a
             @mouseenter="toggle_ShowDropdown(-1)"
-            class="font-semibold border-b-[2px] border-stone-600 text-white hover:border-white h-[20px] flex items-center"
+            class="font-semibold border-b-[2px] border-stone-800 text-white hover:border-white h-[20px] flex items-center"
             href="#test_menu"
             >菜單</a
           >
           <a
-            class="font-semibold border-b-[2px] border-stone-600 text-white hover:border-white h-[20px] flex items-center"
+            class="font-semibold border-b-[2px] border-stone-800 text-white hover:border-white h-[20px] flex items-center"
             href="#Send"
             >購物車</a
           >
           <!-- 搜索欄
           <button
             @click="toggle_ShowSearch"
-            class="font-semibold border-b-[2px] border-stone-600 text-white hover:border-white h-[20px] flex items-center"
+            class="font-semibold border-b-[2px] border-stone-800 text-white hover:border-white h-[20px] flex items-center"
          >
             <img
               src="../assets/images/search_black.png"
@@ -55,7 +55,7 @@
           <transition>
             <div v-if="showSearch">
               <div
-                class="w-[100vw] h-[113px] top-0 left-0 flex justify-center items-center gap-[15px] fixed bg-stone-600"
+                class="w-[100vw] h-[113px] top-0 left-0 flex justify-center items-center gap-[15px] fixed bg-stone-800"
                 style="z-index: 500"
               >
                 <input
@@ -90,7 +90,7 @@
 
     <!-- mobile  -->
     <nav
-      class="sm:flex justify-between items-center bg-stone-600 w-full px-[20px] pr-[30px] py-[10px] border-b-[2px] border-black/10 relative md:hidden"
+      class="sm:flex justify-between items-center bg-stone-800 w-full px-[20px] pr-[30px] py-[10px] border-b-[2px] border-black/10 relative md:hidden"
     >
       <a href="#">
         <button @click="toggle_ShowSearch">
@@ -121,23 +121,23 @@
       <!-- menu  -->
       <div
         v-if="showDropdown_sm"
-        class="w-[100vw] h-auto bg-stone-600 absolute top-[51px] left-0 py-[20px] flex flex-col gap-[25px] items-center shadow-lg tracking-widest"
+        class="w-[100vw] h-auto bg-stone-800 absolute top-[51px] left-0 py-[20px] flex flex-col gap-[25px] items-center shadow-lg tracking-widest"
         style="z-index: 500"
       >
         <a
-          class="font-semibold border-b-[2px] border-stone-600 text-white hover:border-white h-[20px] flex items-center"
+          class="font-semibold border-b-[2px] border-stone-800 text-white hover:border-white h-[20px] flex items-center"
           href="#"
           aria-current="page"
           >首頁</a
         >
         <a
-          class="font-semibold border-b-[2px] border-stone-600 text-white hover:border-white h-[20px] flex items-center"
+          class="font-semibold border-b-[2px] border-stone-800 text-white hover:border-white h-[20px] flex items-center"
           href="#test_menu"
           >菜單</a
         >
 
         <a
-          class="font-semibold border-b-[2px] border-stone-600 text-white hover:border-white h-[20px] flex items-center"
+          class="font-semibold border-b-[2px] border-stone-800 text-white hover:border-white h-[20px] flex items-center"
           href="#Send"
           >購物車</a
         >
@@ -146,7 +146,7 @@
       <transition>
         <div v-if="showSearch">
           <div
-            class="w-full h-[113px] top-0 left-0 bg- flex justify-center items-center gap-[15px] fixed px-[3vw] bg-stone-600"
+            class="w-full h-[113px] top-0 left-0 bg- flex justify-center items-center gap-[15px] fixed px-[3vw] bg-stone-800"
             style="z-index: 500"
           >
             <input
@@ -154,7 +154,7 @@
               v-model="$store.searchWord"
               v-on:keyup.enter="toSearchPage()"
               class="w-[87%] h-[50px] border-black border-[2px] border-double focus:border-black focus:ring-0 text-start text-[18px] text-black/80 tracking-wider"
-              placeholder="搜尋商品"
+              placeholder="搜尋料理"
             />
 
             <button class="w-[50px] h-[50px] bg-black" @click="toSearchPage()">

@@ -61,7 +61,7 @@
                   v-model="$store.searchWord"
                   v-on:keyup.enter="toSearchPage()"
                   class="w-[87%] h-[60px] border-black border-[2px] border-double focus:border-black focus:ring-0 text-start text-[18px] text-black/80 tracking-wider"
-                  placeholder="搜尋商品"
+                  placeholder="搜尋料理"
                 />
 
                 <button
