@@ -1,11 +1,11 @@
 <template>
   <header class="mb-[30px] ixed w-[100vw] bg-stone-800" style="z-index: 100">
     <!-- pc & tablet-->
-    <nav
-      @mouseleave="toggle_ShowDropdown(-1)"
-      class="bg-stone-800 w-full h-[80px] mx-auto max-w-[85rem] md:flex items-center px-[4vw] md:px-[3vw] justify-between border-b-[2px] border-black/10 hidden"
-      style="z-index: 500"
-    >
+   <nav
+    @mouseleave="toggle_ShowDropdown(-1)"
+    class="bg-stone-800 w-full h-[80px] md:flex items-center px-[4vw] md:px-[3vw] justify-between border-b-[2px] border-black/10"
+    style="z-index: 500; position: fixed; top: 0; "
+  >
       <div>
         <a
           class="logo flex align-left; text-2xl font-bold whitespace-nowrap text-white"
